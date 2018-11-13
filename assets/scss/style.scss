@@ -1,0 +1,79 @@
+// ---------- VARIABLES --------------------------
+$openSansCondensed: 'Open Sans Condensed', sans-serif;
+$openSans: 'Open Sans', sans-serif;
+$textColor: #2a2a2a;
+$colorPrimary: #ff0000;
+$colorSecondary: #005a00;
+
+
+// ---------- GLOBAL --------------------------
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: $openSans;
+    color: $textColor;
+    font-size: 16px;
+}
+
+// ---------- NAVI --------------------------
+.navbar {
+    background-color: #FFF;
+    padding: 0 10px;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+.menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu__item {
+    color: $textColor;
+    display: inline-block;
+    padding: 15px 20px;
+    // text-transform: uppercase;
+    transition: all 0.2s ease-in;
+
+    & a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: $colorPrimary;
+        color: #FFF;
+    }
+}
+
+
+// ---------- HEADER --------------------------
+.header {
+    min-height: 100vh;
+    position: relative;
+    background: url('../images/header-1-v2.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header__inner {
+    position: absolute;
+    top: 75%;
+    left: 0;
+    background-color: $textColor;
+    padding: 30px 60px;
+
+    & .header__desc {
+        color: #FFF;
+        margin: 0;
+        padding: 0;
+        font-size: 2rem;
+        font-family: $openSansCondensed;
+    }
+}
