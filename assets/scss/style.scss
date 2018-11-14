@@ -2,8 +2,9 @@
 $openSansCondensed: 'Open Sans Condensed', sans-serif;
 $openSans: 'Open Sans', sans-serif;
 $textColor: #2a2a2a;
-$colorPrimary: #ff0000;
-$colorSecondary: #005a00;
+$red: #ff330a;
+$pink: #ff888e;
+$grey: #7a7a7a;
 
 
 // ---------- GLOBAL --------------------------
@@ -17,28 +18,45 @@ html, body {
     font-family: $openSans;
     color: $textColor;
     font-size: 16px;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.section {
+    padding: 100px 0;
 }
 
 // ---------- NAVI --------------------------
 .navbar {
     background-color: #FFF;
-    padding: 0 10px;
+    padding: 0 40px;
     width: 100%;
     position: fixed;
     z-index: 999;
+    height: 130px;
+}
+
+.navbar-brand {
+    width: 175px;
 }
 
 .menu__list {
     list-style: none;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 .menu__item {
     color: $textColor;
     display: inline-block;
     padding: 15px 20px;
-    // text-transform: uppercase;
+    height: 100%;
+    line-height: 110px;
+    text-transform: uppercase;
     transition: all 0.2s ease-in;
 
     & a {
@@ -47,7 +65,7 @@ html, body {
     }
 
     &:hover {
-        background-color: $colorPrimary;
+        background-color: $red;
         color: #FFF;
     }
 }
@@ -55,25 +73,255 @@ html, body {
 
 // ---------- HEADER --------------------------
 .header {
-    min-height: 100vh;
+    height: 110vh;
+    padding-top: 120px;
     position: relative;
-    background: url('../images/header-1-v2.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    overflow: hidden;
 }
 
-.header__inner {
-    position: absolute;
-    top: 75%;
-    left: 0;
-    background-color: $textColor;
-    padding: 30px 60px;
+.slider-slide img {
+    width: 100%;
+}
 
-    & .header__desc {
-        color: #FFF;
-        margin: 0;
-        padding: 0;
-        font-size: 2rem;
+.slick-arrow {
+    z-index: 10;
+}
+
+.slick-prev {
+    left: 50px;
+}
+
+.slick-next {
+    right: 50px;
+}
+
+.slick-prev:before, 
+.slick-next:before {
+    font-size: 50px;
+}
+
+
+
+// --------------- MAIN POINTS --------------------
+
+.main__points {
+    width: 100%;
+    height: 260px;
+    margin-top: -10px;
+    background-color: $red;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__box {
+    width: 350px;
+    height: 280px;
+    padding: 30px;
+    margin-top: -70px;
+    z-index: 11;
+    background-color: #FFF;
+    
+
+    figure {
+        height: 50px;
+
+        img {
+            max-height: 100%;
+        }
+    }
+    
+    .box__title {
+        font-weight: 700;
+        text-align: center;
         font-family: $openSansCondensed;
+        letter-spacing: 1px;
+
+    }
+
+    .box__desc {
+        text-align: center;
+        padding: 15px 0;
+        font-size: 1.3rem;
+        font-family: $openSansCondensed;
+    }
+}
+
+
+// ------------- ABOUT -----------------------
+
+.about__title {
+    font-size: 4.4rem;
+    padding: 20px 0 30px;
+    font-family: $openSansCondensed;
+
+    span {
+        color: $red;
+        font-weight: 600;
+        font-size: 4.6rem;
+    }
+}
+
+.about__desc {
+    padding-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.button__box a {
+    display: inline-block;
+    padding: 20px 40px;
+    background: $red;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+// ---------------- GOALS -------------------
+
+.goals {
+    position: relative;
+    height: 650px;
+    background: url('../images/tatry.jpg');
+    // background-position: center;
+    background-size: cover;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.4);
+    }
+}
+
+.description__box {
+    position: absolute;
+    left: 50%;
+    bottom: -50%;
+    transform: translateX(-50%);
+    height: 600px;
+    width: 600px;
+    border-radius: 50%;
+    background: #FFF;
+    padding-top: 30px;
+
+    figure {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+.description__box__outline {
+    position: absolute;
+    left: 50%;
+    bottom: -100%;
+    transform: translateX(-50%);
+    height: 1100px;
+    width: 1100px;
+    border-radius: 50%;
+    border: 2px dotted $red;
+}
+
+.single__goal {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background: #FFF;
+    border-radius: 50%;
+
+    p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        height: 210px;
+        width: 210px;
+        border-radius: 50%;
+        border: 2px dotted $red;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 102%;
+        left: 50%;
+        height: 69px;
+        width: 1px;
+        background: red;
+    }
+}
+
+.goal-1 {
+    left: -4%;
+    bottom: 52%;
+    transform: translateY(-50%);
+
+    &::after {
+        top: 64%;
+        left: 124%;
+        transform: skew(70deg);
+        height: 38px;
+        width: 2px;
+    }
+}
+
+.goal-2 {
+    top: -5px;
+    left: 25px;
+    transform: translate(50%, 0);
+
+    &::after {
+        top: 85%;
+        left: 105%;
+        transform: skew(42deg);
+        height: 68px;
+    }
+}
+
+.goal-3 {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.goal-4 {
+    top: -5px;
+    right: 25px;
+    transform: translate(-50%, 0);
+
+    &::after {
+        top: 90%;
+        left: 0;
+        transform: skew(-42deg);
+        height: 68px;
+    }
+}
+
+.goal-5 {
+    right: -4%;
+    bottom: 52%;
+    transform: translateY(-50%);
+
+    &::after {
+        top: 64%;
+        left: unset;
+        right: 124%;
+        transform: skew(-70deg);
+        height: 38px;
+        width: 2px;
     }
 }
