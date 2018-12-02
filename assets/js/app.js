@@ -5,6 +5,11 @@ $( document ).ready(function() {
         autoplaySpeed: 5000
     });
 
+    $(document).scroll(function(){
+        var $nav = $(".navbar");
+        $nav.toggleClass('after-scroll', $(this).scrollTop() > $nav.height());
+    })
+
     $('#load-project-info').on('click', function(){
         var projectDiv = $('#project-info');
         

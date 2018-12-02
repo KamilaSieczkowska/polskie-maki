@@ -15,13 +15,33 @@
 <body>
 
     <nav class="navbar">
+        <h1 class="sr-only">Fundacja Polskie Maki</h1>         
+        <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__item__link" href="#about">Nasze cele</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__item__link" href="#projects">Aktualne projekty</a>
+              </li>
+            <li class="menu__item logo-color">
+                <a class="navbar-brand" href="#"><img src="./assets/images/polskie_maki_logo.png" alt="Fundacja Polskie Maki"></a>
+            </li>
+            <li class="menu__item logo-white">
+                <a class="navbar-brand" href="#"><img src="./assets/images/polskie_maki_logo_white-small.png" alt="Fundacja Polskie Maki"></a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__item__link" href="#volunteer">Dołącz do nas</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__item__link" href="#contact">Kontakt</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="navbar__mobile">
         <a class="navbar-brand" href="#"><img src="./assets/images/polskie_maki_logo.png" alt="Fundacja Polskie Maki"></a>
-        <h1 class="sr-only">Fundacja Polskie Maki</h1> 
-
-        <div class="toggle__menu">
-
-        </div>
-        
+        <a class="navbar-brand" href="#"><img src="./assets/images/polskie_maki_logo_white.png" alt="Fundacja Polskie Maki"></a>
+        <h1 class="sr-only">Fundacja Polskie Maki</h1>         
         <ul class="menu__list">
             <li class="menu__item">
               <a class="menu__item__link" href="#about">Nasze cele</a>
@@ -36,7 +56,7 @@
               <a class="menu__item__link" href="#contact">Kontakt</a>
             </li>
         </ul>
-    </nav>
+    </div>
 
     <header class="header">
         <div class="header__inner" id="header-slider">
@@ -77,22 +97,23 @@
 
     <section class="section" id="about">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <figure>
-                        <img src="https://via.placeholder.com/600" alt="">
-                    </figure>
-                </div>
-                <div class="col-sm-12 col-md-6">
-                    <h2 class="section__title">Z miłości do <br><span>Polski</span></h1>
-                    <p class="section__desc">
-                        Głównym celem powołania fundacji jest objęcie opieki nad polskim dziedzictwem narodowym poza granicami Polski, promocja Polski i polskiej kultury, wsparcie Polonii na rzecz integracji lokalnych środowisk, monitorowanie wszelkich przejawów aktywności patriotycznej Polonii i Polaków za granicą, działania na rzecz promocji Polski w świecie oraz promocji turystyki patriotycznej wśród Polaków podróżujących za granicę.
-                    </p>
-                    <div class="button__box">
-                        <a href="#media">Dowiedz się wiecej</a>
-                    </div>
-                </div>
-            </div>
+            <h2 class="section__title center">Z miłości do <span>Polski</span></h2>
+            <p class="section__desc">
+                Fundacja Polskie Maki została powołana w październiku 2017 r. Głównym celem
+                powołania fundacji jest objęcie opieki nad polskim dziedzictwem narodowym poza
+                granicami Polski, promocja Polski i polskiej kultury, wsparcie Polonii na rzecz integracji
+                lokalnych środowisk, monitorowanie wszelkich przejawów aktywności patriotycznej
+                Polonii i Polaków za granicą, działania na rzecz promocji Polski w świecie oraz promocji                    turystyki patriotycznej wśród Polaków podróżujących za granicę.
+            </p>
+            <p class="section__desc">
+                Kapitał intelektualny fundacji stanowią doświadczeni pracownicy służby zagranicznej,
+                dyplomaci, o wieloletnim doświadczeniu w pracy na placówkach dyplomatyczno-
+                konsularnych i w centrali Ministerstwa Spraw Zagranicznych, o nienagannym przebiegu
+                służby i licznych osiągnięciach zawodowych podejmowanych na rzecz Polonii i Polaków
+                za granicą. Nasi eksperci przez lata działali na rzecz promocji Polski w świecie,                    wsparcia dla Polonii oraz umacniania więzi pomiędzy Polską i Polonią na całym świecie.
+                Doświadczenie to jest bezcenne w kontekście ambitnych celów i zadań realizownych
+                przez Fundację Polskie Maki. 
+            </p>
         </div>
     </section>
 
@@ -143,7 +164,58 @@
         </div>
     </section>
 
-    <section class="section project__section" id="project-info"> 
+    <section class="project__section" id="project-info">
+        <div class="info__box">
+            <div class="info__image">
+                <img src="/assets/images/bali.jpg" alt="">
+            </div>
+            <div class="info__cnt">
+                <h3 class="info__title">O projekcie</h3>
+                <p class="info__desc">
+                    Ambitnym celem przedsięwzięcia jest zgromadzenie pełnej wiedzy o przejawach polskiej aktywności i udostępnienie jej w sposób atrakcyjny i użyteczny dla wszystkich użytkowników.
+                    Portal będzie również stanowił okno na świat dla lokalnych mediów polonijnych, przedrukowując najlepsze artykuły lokalne i udostępniając je czytelnikom na całym świecie.
+                </p>
+            </div>
+        </div>
+        <div class="info__box">
+            <div class="info__cnt">
+                <h3 class="info__title">O projekcie</h3>
+                <p class="info__desc">
+                    Ambitnym celem przedsięwzięcia jest zgromadzenie pełnej wiedzy o przejawach polskiej aktywności i udostępnienie jej w sposób atrakcyjny i użyteczny dla wszystkich użytkowników.
+                    Portal będzie również stanowił okno na świat dla lokalnych mediów polonijnych, przedrukowując najlepsze artykuły lokalne i udostępniając je czytelnikom na całym świecie.
+                </p>
+            </div>
+            <div class="info__image">
+                <img src="/assets/images/bali.jpg" alt="">
+            </div>
+        </div>
+        <div class="info__box">
+            <div class="info__image">
+                <img src="/assets/images/bali.jpg" alt="">
+            </div>
+            <div class="info__cnt">
+                <h3 class="info__title">O projekcie</h3>
+                <p class="info__desc">
+                    Ambitnym celem przedsięwzięcia jest zgromadzenie pełnej wiedzy o przejawach polskiej aktywności i udostępnienie jej w sposób atrakcyjny i użyteczny dla wszystkich użytkowników.
+                    Portal będzie również stanowił okno na świat dla lokalnych mediów polonijnych, przedrukowując najlepsze artykuły lokalne i udostępniając je czytelnikom na całym świecie.
+                </p>
+            </div>
+        </div>
+        <div class="info__box">
+            <div class="info__cnt">
+                <h3 class="info__title">O projekcie</h3>
+                <p class="info__desc">
+                    Ambitnym celem przedsięwzięcia jest zgromadzenie pełnej wiedzy o przejawach polskiej aktywności i udostępnienie jej w sposób atrakcyjny i użyteczny dla wszystkich użytkowników.
+                    Portal będzie również stanowił okno na świat dla lokalnych mediów polonijnych, przedrukowując najlepsze artykuły lokalne i udostępniając je czytelnikom na całym świecie.
+                </p>
+            </div>
+            <div class="info__image">
+                <img src="/assets/images/bali.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="section project__section" id="project-info"> 
         <div class="container flex">
             <div class="single__info__box">
                 <h3 class="section__subtitle">O projekcie</h3>
@@ -188,24 +260,56 @@
                 </p>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="section volunteer" id="volunteer">
         <div class="container">
+            
             <div class="row">
-                <div class="col-md-6">
-                    <h2 class="section__title">Dołącz do nas,<br><span>zostań wolontariuszem</span></h2>
-                </div>
-                <div class="col-md-6">
+                <div class="col-md-10 col-sm-12">
+                    <h3>Zostań wolontariuszem</h3>
                     <p>
-                        Fundacja Polskie Maki poszukuje osób zainteresowanych wsparciem działań na
-                        zasadzie wolontariatu (możliwe są także praktyki studenckie). Poszukujemy zarówno osób zainteresowanych czasowym
-                        wsparciem działań fundacji, jak również osób, które nawiążą współpracę
-                        długoterminową w charakterze <b>lokalnych redaktorów portalu Polski Świat.</b>
+                        Zaangażuj się w pomoc fundacji, <strong>zostań&nbsp;wolontariuszem</strong> i wesprzyj nas w promowaniu polskiej kultury na świecie.
                     </p>
+                    <p>
+                        W Twojej okolicy są miejsca poświęcone polskiej kulturze? Podziel się z nami tą informacją, zostań <strong>lokalnym redaktorem portalu Polski Świat</strong> i podziel się wiedzą.
+                    </p>
+                    <br>
+                    <h3>Przyjdź na praktyki studenckie</h3>
+                    <p>
+                        Buduj z nami Polski Świat - przyjdź na <strong>praktyki studenckie</strong> i pomóż nam poszerzać horyzonty świadomości polskiej kultury na świecie.
+                    </p>
+                </div>
+                <div class="col-md-2 col-sm-12">
+                    <h2 class="section__title center">Ty też możesz pomóc</h2>
+                </div>
+            </div>
+            <figure class="volunteer__white-icon">
+                <img src="/assets/images/volunteer-icon-white.svg" alt="">
+            </figure>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section__title center">Wesprzyj <span>nas</span></h2>
+            <p class="section__desc">
+                Fundacja Polskie Maki utrzymuje się dzięki Waszemu wparciu. <br>
+                Dziękujemy Wam za to, że tak chętnie przyczyniacię się do promocji polskiej kultury na świecie.
+            </p>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <figure class="donate__support">
+                        <img src="/assets/images/donate-icon.svg" alt="">
+                    </figure>
+                </div>
+                <div class="col-md-6 col-sm-12 donate__info">
+                    <p class="account__name">FUNDACJA POLSKIE MAKI</p>
+                    <p>00 0000 0000 0000 0000 0000 0000</p>
                 </div>
             </div>
         </div>
+
     </section>
 
     <footer class="footer">

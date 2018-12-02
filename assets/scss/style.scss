@@ -28,7 +28,11 @@ img {
 .flex {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+}
+
+.center {
+    text-align: center !important; 
 }
 
 .section {
@@ -72,7 +76,7 @@ img {
 
 .section__desc {
     padding-bottom: 50px;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 
 .button__box a {
@@ -87,15 +91,18 @@ img {
 // ---------- NAVI --------------------------
 .navbar {
     background-color: #FFF;
-    padding: 0 40px;
+    padding: 10px 0;
     width: 100%;
     position: fixed;
     z-index: 999;
-    height: 130px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-brand {
-    width: 175px;
+    width: 230px;
 }
 
 .menu__list {
@@ -108,22 +115,76 @@ img {
 .menu__item {
     color: $textColor;
     display: inline-block;
-    padding: 15px 20px;
-    height: 100%;
-    line-height: 110px;
+    padding: 0px 30px;
     text-transform: uppercase;
-    transition: all 0.2s ease-in;
 
     & a {
         color: inherit;
         text-decoration: none;
+        font-size: 1.2rem;
     }
 
-    &:hover {
-        background-color: $red;
+    .menu__item__link {
+        transition: 0.3s ease;
+        text-decoration: none;
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        padding: 20px 0;
+        margin: 0 20px;
+      }
+      .menu__item__link:hover {
+        border-top: 3px solid $red;
+        border-bottom: 3px solid $red;
+        padding: 6px 0; 
+      }
+}
+
+.menu__item.logo-white {
+    display: none;
+}
+
+// ------- NAVI AFTER SCROLL -------------------------
+
+.navbar.after-scroll {
+    background-color: $red;
+
+    .navbar-brand {
+        width: 130px;
+    }
+    
+    .menu__item {
         color: #FFF;
+
+        .menu__item__link {
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            padding: 20px 0;
+            margin: 0 20px;
+          }
+          .menu__item__link:hover {
+            border-top: 2px solid #FFF;
+            border-bottom: 2px solid #FFF;
+            padding: 6px 0; 
+          }
+    }
+
+    .menu__item.logo-white {
+        display: inline-block;
+    }
+
+    .menu__item.logo-color {
+        display: none;
     }
 }
+
+
+
+// -------------- MOBILE NAVI --------------------
+
+.navbar__mobile {
+    display: none;
+}
+
 
 
 // ---------- HEADER --------------------------
@@ -195,8 +256,8 @@ img {
 
     .box__desc {
         text-align: center;
-        padding: 15px 0;
-        font-size: 1.3rem;
+        padding: 10px 0;
+        font-size: 1.4rem;
         font-family: $openSansCondensed;
     }
 }
@@ -207,8 +268,8 @@ img {
 .goals {
     position: relative;
     height: 650px;
-    background: url('../images/tatry.jpg');
-    // background-position: center;
+    background: url('../images/poppy-3581709_1920.jpg');
+    background-position: bottom;
     background-size: cover;
     overflow: hidden;
 
@@ -353,7 +414,7 @@ img {
 
 // --------------- PROJECT ----------------------------
 .project__section {
-    background-color: #efefef;
+    // background-color: #efefef;
     display: none;
     transition: 0.5 all;
 
@@ -373,23 +434,79 @@ img {
     }
 }
 
+.info__box {
+    padding: 20px 0;
+
+    .info__image {
+        width: 40%;
+    }
+}
+
 // --------------- VOLUNTEER ----------------------------
 
 .volunteer {
     background-color: $red;
     color: #FFF;
+    position: relative;
+    .section__title {
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
 
-    .section__title span {
-        color: #FFF;
+    h3 {
+        text-transform: uppercase;
+        padding: 20px 35px;
+        position: relative;
+        display: inline-block;
+
+        &::before,
+        &::after {
+            content: '⁘';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &::after {
+            left: unset;
+            right: 0;
+        }
     }
 
     p {
-        padding-top: 20px;
+        padding: 10px 20px 0 0;
         font-size: 1.3rem;
+    }
+
+    .volunteer__white-icon {
+        position: absolute;
+        right: 210px;
+        bottom: 0;
+        margin: 0;
+        width: 180px;
+        
     }
 }
 
+// -------------- DONATE --------------------
 
+.donate__support {
+    width: 250px;
+    margin: 0 auto;
+}
+
+.donate__info {
+    font-family: $openSans;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 60px;
+
+    .account__name {
+        color: $red;
+    }
+}
 
 
 // --------------- FOOTER ----------------------------
@@ -420,3 +537,6 @@ img {
     }
     
 }
+
+
+
