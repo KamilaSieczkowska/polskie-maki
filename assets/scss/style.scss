@@ -414,31 +414,23 @@ img {
 
 // --------------- PROJECT ----------------------------
 .project__section {
-    // background-color: #efefef;
     display: none;
-    transition: 0.5 all;
+    padding-top: 30px;
 
     &.opened {
         display: block;
     }
 
-    .single__info__box {
-        background: #FFF;
-        width: 49%;
-        padding: 20px;
-        margin-bottom: 30px;
-
-        .section__desc {
-            padding: 20px 40px;
-        }
-    }
 }
 
 .info__box {
-    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    background-color: #FFF;
+    margin-bottom: 30px;
 
     .info__image {
-        width: 40%;
+        width: 100%;
     }
 }
 
@@ -448,46 +440,53 @@ img {
     background-color: $red;
     color: #FFF;
     position: relative;
-    .section__title {
-        font-size: 3rem;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
 
-    h3 {
-        text-transform: uppercase;
-        padding: 20px 35px;
-        position: relative;
-        display: inline-block;
+    .volunteer__info {
+        width: 80%;
 
-        &::before,
-        &::after {
-            content: '⁘';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
+        h3 {
+            text-transform: uppercase;
+            padding: 20px 35px;
+            position: relative;
+            display: inline-block;
+    
+            &::before,
+            &::after {
+                content: '⁘';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+    
+            &::after {
+                left: unset;
+                right: 0;
+            }
         }
-
-        &::after {
-            left: unset;
-            right: 0;
+    
+        p {
+            padding: 10px 20px 0 0;
+            font-size: 1.3rem;
         }
     }
 
-    p {
-        padding: 10px 20px 0 0;
-        font-size: 1.3rem;
-    }
-
-    .volunteer__white-icon {
+    .volunteer__decor {
         position: absolute;
         right: 210px;
         bottom: 0;
-        margin: 0;
-        width: 180px;
-        
+        width: 200px;
+        text-transform: uppercase;
+
+        .volunteer__white-icon {
+            margin: 0;
+            margin-top: 20px;
+            width: 200px;
+        }
+
     }
+
+    
 }
 
 // -------------- DONATE --------------------
