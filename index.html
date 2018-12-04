@@ -38,24 +38,33 @@
         </ul>
     </nav>
 
-    <div class="navbar__mobile">
-        <a class="navbar-brand" href="#"><img src="./assets/images/polskie_maki_logo.png" alt="Fundacja Polskie Maki"></a>
-        <a class="navbar-brand" href="#"><img src="./assets/images/polskie_maki_logo_white.png" alt="Fundacja Polskie Maki"></a>
-        <h1 class="sr-only">Fundacja Polskie Maki</h1>         
-        <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__item__link" href="#about">Nasze cele</a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__item__link" href="#projects">Aktualne projekty</a>
-              </li>
-            <li class="menu__item">
-              <a class="menu__item__link" href="#volunteer">Dołącz do nas</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__item__link" href="#contact">Kontakt</a>
-            </li>
-        </ul>
+    <div class="navbar__mobile after-scroll">
+        <div class="mobile__menu__inner">
+            <a class="navbar-brand logo-color" href="#"><img src="./assets/images/polskie_maki_logo.png" alt="Fundacja Polskie Maki"></a>
+            <a class="navbar-brand logo-white" href="#"><img src="./assets/images/polskie_maki_logo_white.png" alt="Fundacja Polskie Maki"></a>
+            <h1 class="sr-only">Fundacja Polskie Maki</h1>   
+
+            <div class="button__container" id="toggle">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
+            </div>      
+
+            <ul class="menu__list" id="mobile__menu">
+                <li class="menu__item">
+                    <a class="menu__item__link" href="#about">Nasze cele</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__item__link" href="#projects">Aktualne projekty</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__item__link" href="#volunteer">Dołącz do nas</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__item__link" href="#contact">Kontakt</a>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <header class="header">
@@ -126,19 +135,19 @@
 
         <div class="description__box__outline">
             <div class="single__goal goal-1">
-                <p>Wsparcie integracji środowisk lokalnych</p>
+                <p>Wspieramy integrację środowisk lokalnych</p>
             </div>
             <div class="single__goal goal-2">
-                <p>Promocja polskiej kultury na świecie</p>
+                <p>Promujemy polską kulturę na świecie</p>
             </div>
             <div class="single__goal goal-3">
-                <p>Opieka nad dziedzictwem narodowym</p>
+                <p>Opiekujemy się dziedzictwem narodowym</p>
             </div>
             <div class="single__goal goal-4">
-                <p>Monitorowanie aktywności patriotycznej Polaków za granicą</p>
+                <p>Monitorujemy aktywność patriotyczną Polaków za granicą</p>
             </div>
             <div class="single__goal goal-5">
-                <p>Promocja turystyki patriotycznej</p>
+                <p>Promujemy turystykę patriotyczną</p>
             </div>
         </div>
     </section>
@@ -152,25 +161,19 @@
                         Pierwsza w Polsce kompleksowa baza danych o historycznej i bieżącej aktywności Polonii i Polaków za granicą wraz z innowacyjnym portalem internetowym, którego sercem będzie interaktywny zbiór map ilustrujących te dane, umożliwiający ich selekcję, wyszukiwanie oraz uzupełnianie przez każdego użytkownika.
                     </p>
                     <div class="button__box" id="load-project-info">
-                        <a href="#project-info">Dowiedz się wiecej</a>
+                        <span>Dowiedz się wiecej</span>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 projects__decor">
                     <figure>
                         <img src="./assets/images/AdobeStock_230936947_Preview1.jpg" alt="">
                     </figure>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="project__section" id="project-info">
-        <div class="row">
-            <div class="col-md-6 col-sm-12">
-                <img src="/assets/images/collage-min.jpg" alt="">
-            </div>
-
-            <div class="col-md-6 col-sm-12">
+        <div class="project__section" id="project-info">
+            <div class="single__info">
                 <h3 class="info__title">O projekcie</h3>
                 <p class="info__desc">
                     Ambitnym celem przedsięwzięcia jest zgromadzenie pełnej wiedzy o przejawach polskiej aktywności i udostępnienie jej w sposób atrakcyjny i użyteczny dla wszystkich użytkowników.
@@ -185,6 +188,8 @@
                     sportu włącznie z aspektami życia codziennego takimi jak polskie sklepy czy eksperci w
                     danej dziedzinie, jak dentyści, prawnicy czy tłumacze.
                 </p>
+            </div>
+            <div class="single__info">
                 <h3 class="info__title">Dla kogo?</h3>
                 <p class="info__desc">
                     Odbiorcami danych publikowanych na portalu będą przedstawiciele Polonii i
@@ -193,6 +198,8 @@
                     oraz osoby w kraju, zainteresowane historią polskiej emigracji oraz dokonaniami
                     Polaków na całym świecie, w tym, środowiska uniwersyteckie.
                 </p>
+            </div>
+            <div class="single__info">
                 <h3 class="info__title">Na czym polega rewolucja?</h3>
                 <p class="info__desc">
                     Głównym mechanizmem utrzymującym aktualność i kompleksowość danych jest
@@ -208,7 +215,10 @@
         </div>
     </section>
 
-    <section class="section volunteer" id="volunteer">
+   
+        
+
+    <!-- <section class="section volunteer" id="volunteer">
         <div class="container">
             
             <div class="volunteer__info">
@@ -232,7 +242,7 @@
                 </figure>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="section">
         <div class="container">
