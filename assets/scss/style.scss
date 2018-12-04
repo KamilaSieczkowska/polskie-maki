@@ -721,6 +721,11 @@ img {
     display: none;
     @media screen and (min-width: $tablet) {
         display: block;
+
+        figure {
+            border-radius: 50%;
+            overflow: hidden;
+        }
     }
 }
 
@@ -780,7 +785,7 @@ img {
     position: relative;
 
     .volunteer__info {
-        width: 80%;
+        width: 75%;
 
         h3 {
             text-transform: uppercase;
@@ -815,6 +820,10 @@ img {
         bottom: 0;
         width: 200px;
         text-transform: uppercase;
+
+        .section__title {
+            font-size: 3rem;
+        }
 
         .volunteer__white-icon {
             margin: 0;
