@@ -1,30 +1,68 @@
-$( document ).ready(function() {
+$(document).ready(function () {
 
 
     // TOGGLE MOBILE MENU
-    $('#toggle').click(function() {
+    $('#toggle').click(function () {
         $(this).toggleClass('active');
         $('#mobile__menu').toggleClass('open');
     });
 
     //HIDE MOBILE MENU ON ITEM CLICK
     var mobileMenuLinks = $('#mobile__menu').find('.menu__item');
-    mobileMenuLinks.each(function(){
-        $(this).click(function(){
-            if($('#toggle').hasClass('active')) {
-                setTimeout(function(){
+    mobileMenuLinks.each(function () {
+        $(this).click(function () {
+            if ($('#toggle').hasClass('active')) {
+                setTimeout(function () {
                     $('#toggle').removeClass('active');
                     $('#mobile__menu').removeClass('open');
-                },300)
+                }, 300)
             }
         })
     })
 
     // SCROLL NAVI EFFECT
-    $(document).scroll(function(){
+    $(document).scroll(function () {
         var $nav = $(".navbar");
         $nav.toggleClass('after-scroll', $(this).scrollTop() > $nav.height());
     });
+
+    // SCROLL TO ID
+    // Select all links with hashes
+    $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function (event) {
+            // On-page links
+            if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                &&
+                location.hostname == this.hostname
+            ) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: (target.offset().top) - 90
+                    }, 1000, function () {
+                        // Callback after animation
+                        // Must change focus!
+                        var $target = $(target);
+                        $target.focus();
+                        if ($target.is(":focus")) { // Checking if the target was focused
+                            return false;
+                        } else {
+                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                            $target.focus(); // Set focus again
+                        };
+                    });
+                }
+            }
+        });
 
     // SLICK SLIDER INIT
     $('#header-slider').slick({
@@ -33,10 +71,10 @@ $( document ).ready(function() {
     });
 
     // LOAD PROJECT INFO
-    $('#load-project-info').on('click', function(){
+    $('#load-project-info').on('click', function () {
         var projectDiv = $('#project-info');
-        
-        if (projectDiv.hasClass('opened')){
+
+        if (projectDiv.hasClass('opened')) {
             projectDiv.removeClass('opened');
             $(this).find('span').text('Dowiedz się więcej');
         } else {
