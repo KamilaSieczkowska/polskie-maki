@@ -10,9 +10,5 @@
   "license": "MIT",
   "devDependencies": {
     "compass": "^0.1.1"
-  },
-  "dependencies": {
-    "jquery-parallax.js": "^1.5.0",
-    "slick-carousel": "^1.8.1"
   }
 }
