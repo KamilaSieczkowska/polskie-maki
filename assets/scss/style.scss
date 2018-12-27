@@ -961,11 +961,21 @@ img {
     position: relative;
 
     .decor {
-        position: absolute;
-        background-color: $red;
-        top: 0;
-        right: 20px;
-        width: 200px;
+        display: none;
+
+        @media screen and (min-width: $tablet) {
+            display: block;
+            position: absolute;
+            background-color: $red;
+            top: 0;
+            right: 20px;
+            width: 140px;
+            padding-top: 20px;
+        }
+
+        @media screen and (min-width: $large) {
+            right: 200px;
+        }
     }
 }
 
