@@ -70,17 +70,4 @@ $(document).ready(function () {
         autoplaySpeed: 5000
     });
 
-    // LOAD PROJECT INFO
-    $('#load-project-info').on('click', function () {
-        var projectDiv = $('#project-info');
-
-        if (projectDiv.hasClass('opened')) {
-            projectDiv.removeClass('opened');
-            $(this).find('span').text('Dowiedz się więcej');
-        } else {
-            projectDiv.addClass('opened');
-            $(this).find('span').text('Zwiń');
-        }
-    })
-
 });

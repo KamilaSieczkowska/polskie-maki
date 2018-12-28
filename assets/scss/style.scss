@@ -979,96 +979,7 @@ img {
     }
 }
 
-// .volunteer {
-//     position: relative;
-//     width: 100%;
-//     height: 100%;
 
-//     .volunteer__info {
-//         width: 100%;
-//         padding: 10px;
-//         // background-color: rgba(255, 51, 10, 0.7);
-
-//         @media screen and (min-width: $tablet) {
-//             width: 75%;
-//             padding: 40px 20px;
-//         }
-
-//         h3 {
-//             text-transform: uppercase;
-//             padding: 20px 35px;
-//             position: relative;
-//             display: inline-block;
-//             width: 100%;
-//             font-size: 1.5rem;
-
-//             @media screen and (min-width: $tablet) {
-//                 width: unset;
-//             }
-    
-//             &::before,
-//             &::after {
-//                 content: '⁘';
-//                 position: absolute;
-//                 left: 0;
-//                 top: 50%;
-//                 transform: translateY(-50%);
-//             }
-    
-//             &::after {
-//                 display: none;
-
-//                 @media screen and (min-width: $tablet) {
-//                     display: block;
-//                     left: unset;
-//                     right: 0;
-//                 }
-//             }
-//         }
-    
-//         p {
-//             padding: 10px 20px 0 0;
-//             font-size: 1.3rem;
-//         }
-//     }
-
-//     .volunteer__decor {
-//         display: none;
-
-//         @media screen and (min-width: $tablet) {
-//             display: block;
-//             background-color: $red;
-//             color: #FFF;
-//             position: absolute;
-//             width: 160px;
-//             height: 100%;
-//             padding: 0 20px;
-//             right: 20px;
-//             bottom: 0;
-//             text-transform: uppercase;
-//         }
-
-//         @media screen and (min-width: $large) {
-//             width: 200px;
-//             right: 210px;
-//         }
-
-//         .section__title {
-//             font-size: 3rem;
-//             margin-top: 70px;
-//         }
-
-//         .volunteer__white-icon {
-//             margin: 0;
-//             position: absolute;
-//             bottom: 0;
-//             width: 80%;
-//         }
-
-//     }
-
-    
-// }
 
 // -------------- DONATE --------------------
 
@@ -1105,41 +1016,50 @@ img {
 
 .contact {
     background-color: $red;
-    width: 100%;
+    color: #FFF;
 
-    .section__title {
-        color: #FFF;
-        text-transform: uppercase;
+    .contact__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        figure {
+            width: 240px;
+        }
     }
 
-    .contact__box {
-        width: 100%;
-        text-align: center;
-        font-size: 1.2rem;
-        font-family: $openSansCondensed;
-        color: #FFF;
+    .info__title {
+        color: inherit;
+        padding-left: 70px;
 
-        @media screen and (min-width: $tablet) {
-            font-size: 2.4rem;
-        }
-
-        div {
-            padding: 20px;
-        }
-
-        .phone i {
-            transform: scaleX(-1);
-        }
-
-        a,
         span {
+            &::before {
+                background-color: #FFF;
+                height: 3px;
+                width: 50px;
+                left: -70px;
+            }
+        }
+
+    }
+    .info__desc {
+
+        a {
             color: inherit;
             text-decoration: none;
-            padding-left: 15px;
+        }
 
-            @media screen and (min-width: $tablet) {
-                padding-left: 30px;
-            }
+    }
+
+    .krs__info {
+        color: inherit;
+        padding-top: 20px;
+
+        a {
+            color:  inherit;
+            text-decoration: none;
+            padding-top: 20px;
+            display: inline-block;
         }
     }
 }
@@ -1149,40 +1069,16 @@ img {
 .footer {
     background-color: $textColor;
     color: #FFF;
-    padding: 20px 0;
+    padding: 15px;
+    text-align: right;
+    font-size: 0.8rem;
 
-    .footer__cnt {
-        display: flex;
-        align-items: center;
-        font-size: .8rem;
-
-        @media screen and (min-width: $tablet) {
-            font-size: 1rem;
-        }
-    }
-
-    figure {
-        width: 50%;
-        display: none;
-
-        @media screen and (min-width: $tablet) {
-            display: block;
-        }
-    }
-}
-
-.copy {
-    padding: 10px 0;
-    text-align: center;
-    background-color: $textColor;
-
-    a,
-    a:hover {
-        color: #FFF;
+    a {
+        color: inherit;
         text-decoration: none;
-        padding: 10px 20px;
     }
 }
+
 
 
 
