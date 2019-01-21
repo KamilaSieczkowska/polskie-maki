@@ -106,5 +106,4 @@ $(document).ready(function () {
         $('.standing__order .ctooltip').toggleClass('opened');
     })
 
-
 });
