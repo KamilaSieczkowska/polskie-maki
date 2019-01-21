@@ -88,6 +88,19 @@ $(document).ready(function () {
         })
     });
 
+    var userAmount = $('#user-amount');
+
+    userAmount.change(function(){
+        var tempUserAmount = $(this).val();
+
+        if(isNaN(tempUserAmount)) {
+            $('.message').text('Wpisana wartość musi być liczbą całkowitą.')
+        }
+        else {
+            $('.message').text('')
+        }
+    })
+
     //STANDING ORDER TOOLTIP
     $('.standing__order i').hover(function(){
         $('.standing__order .ctooltip').toggleClass('opened');

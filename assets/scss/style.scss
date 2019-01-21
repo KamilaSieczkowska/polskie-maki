@@ -1157,32 +1157,39 @@ form {
             width: 100%;
             padding: 5px;
         }
-    }
-}
 
-.standing__order {
-    position: relative;
-   
-    @media screen and (min-width: $desktop) {
-        width: 75%;
-    }
-
-    @media screen and (min-width: $large) {
-        width: 50%;
+        .message {
+            font-family: $openSansCondensed;
+            font-weight: normal;
+            font-size: 1.6rem;
+            color: $red;
+        }
     }
 
-    input {
-        height: 20px;
-        width: 20px;
-    }
-
-    span {
-        font-family: $openSansCondensed;
-        font-size: 1.7rem;
-        font-weight: normal; 
-        
+    .standing__order {
+        position: relative;
+       
         @media screen and (min-width: $desktop) {
-            font-size: 2rem;
+            width: 75%;
+        }
+    
+        @media screen and (min-width: $large) {
+            width: 50%;
+        }
+    
+        input {
+            height: 20px;
+            width: 20px;
+        }
+    
+        span {
+            font-family: $openSansCondensed;
+            font-size: 1.7rem;
+            font-weight: normal; 
+            
+            @media screen and (min-width: $desktop) {
+                font-size: 2rem;
+            }
         }
     }
 }
