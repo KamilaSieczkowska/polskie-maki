@@ -70,4 +70,22 @@ $(document).ready(function () {
         autoplaySpeed: 5000
     });
 
+
+    //AMOUNT BUTTONS ON CLICK 
+    $('.amount__button span').each(function(){
+        var that = $(this);
+        that.click(function(){
+            $('.clicked').each(function(){
+                $(this).removeClass('clicked')
+            })
+            that.parent().addClass('clicked')
+        })
+    })
+
+    //STANDING ORDER TOOLTIP
+    $('.standing__order i').hover(function(){
+        $('.standing__order .ctooltip').toggleClass('opened');
+    })
+
+
 });

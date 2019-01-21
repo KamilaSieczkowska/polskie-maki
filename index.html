@@ -158,7 +158,7 @@
                 <p>Opiekujemy&nbsp;się dziedzictwem narodowym</p>
             </div>
             <div class="single__goal goal-4">
-                <p>Monitorujemy aktywność patriotyczną Polaków za granicą</p>
+                <p>Monitorujemy aktywność Polaków za granicą</p>
             </div>
             <div class="single__goal goal-5">
                 <p>Promujemy turystykę patriotyczną</p>
@@ -199,9 +199,6 @@
                         sportu włącznie z aspektami życia codziennego takimi jak polskie sklepy czy eksperci w
                         danej dziedzinie, jak dentyści, prawnicy czy tłumacze.
                     </p>
-                    <p class="info__desc">
-                        Przykład mapy Polskiego Śwata znajduje się <a target="_blank" href="https://www.google.com/maps/d/viewer?mid=1q_FeECjdazq9RBBX6r4zhbGgb2yh8tRX&ll=40.072778297338274%2C3.1696796767381556&z=3">tutaj</a>.
-                    </p>
                 </div>
                 <div class="info__box">
                     <h3 class="info__title"><span>Dla kogo to robimy?</span></h3>
@@ -230,6 +227,16 @@
                         aktywności Polaków poza granicami Polski.
                     </p>
                 </div>
+
+                <div class="info__box">
+                    <h3 class="info__title"><span>Przykłady map</span></h3>
+                    <div class="maps__prev">
+                        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dGmKGgaqq_wATjIcB1-yVJ1wHQqPYeaG"></iframe>
+                        <iframe src="https://www.google.com/maps/d/embed?mid=1q_FeECjdazq9RBBX6r4zhbGgb2yh8tRX"></iframe>
+                        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=107s29A2llSJ-C4cZyw2mkdoOg7W7bB-M"></iframe>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -253,7 +260,7 @@
                 Zaangażuj się w pomoc fundacji, zostań wolontariuszem i razem z nami promuj
                 polską kulturę na świecie.
             </p>
-            <p class="section__desc">
+            <p class="info__desc">
                 W Twojej okolicy są miejsca poświęcone polskiej kulturze? Podziel się z nami tą informacją, zostań
                 lokalnym redaktorem portalu Polski Świat i podziel się wiedzą.
             </p>
@@ -272,6 +279,30 @@
     
     <div class="label"></div>
 
+    <section class="section xxxxxx" id="xxxxx">
+            <div class="container">
+                <h3 class="section__title center">Coś <span>tam</span></h3>
+                <h2 class="info__title"><span>XXX</span></h2>
+                <p class="info__desc">
+                    xxxxxxxxxx
+                </p>
+                <p class="info__desc">
+                    xxxxxxxxxx
+                </p>
+    
+                <h2 class="info__title"><span>XXX</span></h2>
+                <p class="info__desc">
+                    xxxxxxxxxx
+                </p>
+            </div>
+        </section>
+    
+        <div class="label"></div>
+    
+        <div class="parallax-window my__parallax" data-parallax="scroll" data-image-src="./assets/images/poppy.jpg"></div>
+        
+        <div class="label"></div>
+
     <section class="section" id="support-us">
         <div class="container">
             <h2 class="section__title center">Wesprzyj <span>nas</span></h2>
@@ -280,14 +311,59 @@
                 Dziękujemy Wam za to, że tak chętnie przyczyniacię się do promocji polskiej kultury na świecie.
             </p>
             <div class="row">
-                <div class="col-md-6 col-sm-12">
+                <div class="col-sm-12 col-md-6 col-lg-4 ">
                     <figure class="donate__support">
                         <img src="assets/images/donate-icon.svg" alt="">
                     </figure>
                 </div>
-                <div class="col-md-6 col-sm-12 donate__info">
-                    <p class="account__name">FUNDACJA POLSKIE MAKI</p>
-                    <p>00 0000 0000 0000 0000 0000 0000</p>
+                <div class="col-sm-12 col-md-6 col-lg-8 donate__info">
+                    <!-- <p class="account__name">FUNDACJA POLSKIE MAKI</p>
+                    <p>00 0000 0000 0000 0000 0000 0000</p> -->
+
+                    <form action="https://pay.cashbill.pl/form/pay.php" method="POST">
+                        <input type="hidden" name="service" value="Identyfikator punktu"/>
+                        <input type="hidden" name="sign" value="{$sign}"/>
+
+                        <div class="amount__box">
+                            <label class="amount__button">
+                                <input type="radio" name="amount" value="10"/>
+                                <span>10 zł</span>
+                            </label>
+                            <label class="amount__button">
+                                <input type="radio" name="amount" value="50"/>
+                                <span>50 zł</span>
+                            </label>
+                            <label class="amount__button">
+                                <input type="radio" name="amount" value="100"/>
+                                <span>100 zł</span>
+                            </label>
+                        </div>
+
+                        <div class="inline__box">
+                            <label class="amount__custom">
+                                <input name="userAmount" value="" type="tel" placeholder="Wpisz kwotę"/>
+                            </label>
+
+                            <div class="standing__order">
+                                <label>
+                                    <input type="checkbox" name="standingOrder" id="">
+                                    <span>Stałe polecenie zapłaty</span>
+                                </label>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <div class="ctooltip">
+                                    Utwórz stałe polecenie zapłaty i&nbsp;pomagaj nam regularnie - przelewy na określoną przez Ciebie kwotę będą wychodziły z&nbsp;Twojego banku automatycznie.
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <label class="submit__button">
+                                <input type="submit" value="Płacę" />
+                            </label>
+
+                    </form>
+
+                    <p class="section__desc">Jesteśmy także na&nbsp;&nbsp; <a href="https://patronite.pl/"><img src="/assets/images/logo_patronite.png" alt=""></a></p>
                 </div>
             </div>
         </div>
