@@ -80,7 +80,13 @@ $(document).ready(function () {
             })
             that.parent().addClass('clicked')
         })
-    })
+    });
+
+    $('.amount__custom').click(function(){
+        $('.clicked').each(function(){
+            $(this).removeClass('clicked')
+        })
+    });
 
     //STANDING ORDER TOOLTIP
     $('.standing__order i').hover(function(){

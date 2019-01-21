@@ -1090,6 +1090,7 @@ form {
     background-color: $pink;
     position: relative;
     box-shadow: 0px 0px 20px 1px #c5c5c5;
+    cursor: pointer;
 
     @media screen and (min-width: $tablet) {
         height: 100px;
