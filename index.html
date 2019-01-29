@@ -7,6 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fundacja Polskie Maki</title>
 
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" type="text/css" href="assets/js/slick-carousel/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="assets/js/slick-carousel/slick/slick-theme.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
@@ -75,10 +92,10 @@
 
     <header class="header">
         <div class="header__inner" id="header-slider">
-            <div class="slider-slide"><img src="assets/images/AdobeStock_86001236_Preview.jpeg" alt=""></div>
-            <div class="slider-slide"><img src="assets/images/AdobeStock_177133638_Preview.jpeg" alt=""></div>
-            <div class="slider-slide"><img src="assets/images/AdobeStock_194429080_Preview.jpeg" alt=""></div>
-            <div class="slider-slide"><img src="assets/images/AdobeStock_180244064_Preview.jpeg" alt=""></div>
+            <div class="slider-slide"><img src="assets/images/slider_1.jpeg" alt=""></div>
+            <div class="slider-slide"><img src="assets/images/slider_2.jpeg" alt=""></div>
+            <div class="slider-slide"><img src="assets/images/slider_3.jpeg" alt=""></div>
+            <div class="slider-slide"><img src="assets/images/slider_4.jpeg" alt=""></div>
         </div>
     </header>
 
@@ -317,54 +334,57 @@
                     </figure>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-8 donate__info">
-                    <!-- <p class="account__name">FUNDACJA POLSKIE MAKI</p>
-                    <p>00 0000 0000 0000 0000 0000 0000</p> -->
+                    <p class="account__name">FUNDACJA POLSKIE MAKI</p>
+                    <p>00 0000 0000 0000 0000 0000 0000</p>
 
-                    <form action="https://pay.cashbill.pl/form/pay.php" method="POST">
+                    <!-- <form action="https://pay.cashbill.pl/form/pay.php" method="POST">
                         <input type="hidden" name="service" value="Identyfikator punktu"/>
                         <input type="hidden" name="sign" value="{$sign}"/>
 
                         <div class="amount__box">
-                            <label class="amount__button">
+                            <label class="amount amount__button">
                                 <input type="radio" name="amount" value="10"/>
                                 <span>10 zł</span>
                             </label>
-                            <label class="amount__button">
+                            <label class="amount amount__button">
                                 <input type="radio" name="amount" value="50"/>
                                 <span>50 zł</span>
                             </label>
-                            <label class="amount__button">
+                            <label class="amount amount__button">
                                 <input type="radio" name="amount" value="100"/>
                                 <span>100 zł</span>
                             </label>
                         </div>
 
                         <div class="inline__box">
-                            <label class="amount__custom">
-                                <input name="userAmount" type="text" value="" placeholder="Wpisz kwotę" id="user-amount"/>
+                            <label class="amount amount__custom">
+                                <input type="radio" name="amount" value="0" class="custom__value__checkbox"/>
+                                <span class="user__amount">
+                                    Własna kwota:
+                                    <input name="userAmount" type="text" value="" placeholder="Wpisz kwotę" id="user-amount"/>
+                                </span>
                                 <p class="message"></p>
                             </label>
-
-                            <div class="standing__order">
-                                <label>
-                                    <input type="checkbox" name="standingOrder" id="">
-                                    <span>Stałe polecenie zapłaty</span>
-                                </label>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <div class="ctooltip">
-                                    Utwórz stałe polecenie zapłaty i&nbsp;pomagaj nam regularnie - przelewy na określoną przez Ciebie kwotę będą wychodziły z&nbsp;Twojego banku automatycznie.
-                                </div>
-                            </div>
-                            
                         </div>
 
-                        <label class="submit__button">
-                                <input type="submit" value="Płacę" />
+                        <div class="standing__order">
+                            <label>
+                                <input type="checkbox" name="standingOrder" id="">
+                                <span>Stałe polecenie zapłaty</span>
                             </label>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <div class="ctooltip">
+                                Utwórz stałe polecenie zapłaty i&nbsp;pomagaj nam regularnie - przelewy na określoną przez Ciebie kwotę będą wychodziły z&nbsp;Twojego banku automatycznie.
+                            </div>
+                        </div>
+                            
+                        <label class="submit__button">
+                            <input type="submit" value="Płacę" />
+                        </label>
 
-                    </form>
+                    </form> -->
 
-                    <p class="section__desc">Jesteśmy także na&nbsp;&nbsp; <a href="https://patronite.pl/"><img src="assets/images/logo_patronite.png" alt=""></a></p>
+                    <!-- <p class="section__desc">Jesteśmy także na&nbsp;&nbsp; <a href="https://patronite.pl/"><img src="assets/images/logo_patronite.png" alt=""></a></p> -->
                 </div>
             </div>
         </div>

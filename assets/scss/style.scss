@@ -1141,55 +1141,63 @@ form {
 }
 
 .inline__box {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
     width: 100%;
-
-    @media screen and (min-width: $desktop) {
-        flex-direction: row;
-    }
 
     .amount__custom {
         margin-right: 20px;
+        position: relative;
+        width: 100%;
 
-        input {
-            width: 100%;
-            padding: 5px;
+        .user__amount {
+            font-family: $openSansCondensed;
+            font-size: 1.7rem;
+            font-weight: normal; 
+        
+        @media screen and (min-width: $desktop) {
+            font-size: 2rem;
         }
+
+            input {
+                padding: 5px;
+                text-align: center;
+                width: 50%;
+            }
+        }
+        
 
         .message {
             font-family: $openSansCondensed;
             font-weight: normal;
             font-size: 1.6rem;
             color: $red;
+            margin-top: 20px;
         }
     }
+}
 
-    .standing__order {
-        position: relative;
-       
+.standing__order {
+    position: relative;
+   
+    @media screen and (min-width: $desktop) {
+        width: 75%;
+    }
+
+    @media screen and (min-width: $large) {
+        width: 50%;
+    }
+
+    input {
+        height: 20px;
+        width: 20px;
+    }
+
+    span {
+        font-family: $openSansCondensed;
+        font-size: 1.7rem;
+        font-weight: normal; 
+        
         @media screen and (min-width: $desktop) {
-            width: 75%;
-        }
-    
-        @media screen and (min-width: $large) {
-            width: 50%;
-        }
-    
-        input {
-            height: 20px;
-            width: 20px;
-        }
-    
-        span {
-            font-family: $openSansCondensed;
-            font-size: 1.7rem;
-            font-weight: normal; 
-            
-            @media screen and (min-width: $desktop) {
-                font-size: 2rem;
-            }
+            font-size: 2rem;
         }
     }
 }

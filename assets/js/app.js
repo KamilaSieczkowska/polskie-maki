@@ -72,38 +72,94 @@ $(document).ready(function () {
 
 
     //AMOUNT BUTTONS ON CLICK 
-    $('.amount__button span').each(function(){
+    var amount = null;
+
+    $('.amount__button span').each(function () {
         var that = $(this);
-        that.click(function(){
-            $('.clicked').each(function(){
+        that.click(function () {
+            $('.clicked').each(function () {
                 $(this).removeClass('clicked')
             })
             that.parent().addClass('clicked')
         })
     });
 
-    $('.amount__custom').click(function(){
-        $('.clicked').each(function(){
+    function changedUserAmount() {
+        $('#user-amount').change(function () {
+            var userAmount = $('#user-amount');
+            var tempUserAmount = userAmount.val();
+            amount = tempUserAmount;
+
+            if (isNaN(tempUserAmount)) {
+                $('.message').text('Wpisana wartość musi być liczbą całkowitą.');
+            }
+            else {
+                $('.message').text('');
+            }
+        });
+    }
+
+    $('.amount input').each(function () {
+        var that = $(this);
+        that.click(function () {
+
+            if (that.hasClass('custom__value__checkbox')) {
+                changedUserAmount();
+            }
+            else {
+                amount = that.val();
+            }
+        })
+    });
+
+    $('.amount__custom').click(function () {
+        $('.clicked').each(function () {
             $(this).removeClass('clicked')
         })
     });
 
-    var userAmount = $('#user-amount');
-
-    userAmount.change(function(){
-        var tempUserAmount = $(this).val();
-
-        if(isNaN(tempUserAmount)) {
-            $('.message').text('Wpisana wartość musi być liczbą całkowitą.')
-        }
-        else {
-            $('.message').text('')
-        }
-    })
-
     //STANDING ORDER TOOLTIP
-    $('.standing__order i').hover(function(){
+    $('.standing__order i').hover(function () {
         $('.standing__order .ctooltip').toggleClass('opened');
     })
+
+
+    //CASHBILL 
+    var service = "aaa"; // Identyfikator punktu
+    var key = "vvv"; // Klucz szyfrujacy
+
+    //funkcja hashująca sign:
+    String.prototype.hashCode = function (){
+        var hash = 0;
+        if (this.length == 0) return hash;
+        for (i = 0; i < this.length; i++) {
+            char = this.charCodeAt(i);
+            hash = ((hash<<5)-hash)+char;
+            hash = hash & hash; // Convert to 32bit integer
+        }
+        return hash;
+    }
+
+    
+
+    // Funkcja sprawdzajaca poprawnosc sygnatury
+
+    function check_sign(data, key, sign) {
+
+        if (md5(service + '|' + amount + '|' + key) == $sign) {
+            return true;
+        }
+
+        return false;
+    }
+
+
+
+
+
+
+
+
+
 
 });
