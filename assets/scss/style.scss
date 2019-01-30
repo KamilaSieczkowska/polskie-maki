@@ -62,10 +62,6 @@ img {
         @media screen and (min-width: $tablet) {
             font-size: 4.6rem;
         }
-
-        a {
-            color: inherit;
-        }
     }
 }
 
@@ -817,6 +813,32 @@ img {
 .info__box {
     padding: 20px 0;
     width: 100%;
+
+    .link {
+        font-size: 2.5rem;
+        padding: 0 0 10px;
+        font-family: $openSansCondensed;
+        text-align: center;
+    
+        @media screen and (min-width: $tablet) {
+            font-size: 3rem;
+            padding: 20px 0 30px;
+        }
+
+        a {
+            color: inherit;
+        }
+    
+        span {
+            color: $red;
+            font-weight: 700;
+            font-size: 3rem;
+    
+            @media screen and (min-width: $tablet) {
+                font-size: 3.4rem;
+            }
+        }
+    }
 }
 
 .info__title {
