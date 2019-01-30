@@ -819,6 +819,26 @@ img {
             color: $red;
         }
     }
+
+    .link {
+        font-size: 3rem;
+        padding: 0 0 10px;
+        font-family: $openSansCondensed;
+        text-align: center;
+        color: $red;
+        
+        @media screen and (min-width: $tablet) {
+            font-size: 4rem;
+            padding: 20px 0 30px;
+        }
+
+        a {
+            color: inherit;
+        }
+        
+        
+
+    }
 }
 
 .info__title {
