@@ -814,24 +814,9 @@ img {
     padding: 20px 0;
     width: 100%;
 
-    .link {
-        font-size: 2.5rem;
-        padding: 0 0 10px;
-        font-family: $openSansCondensed;
-        text-align: center;
-    
-        @media screen and (min-width: $tablet) {
-            font-size: 3rem;
-            padding: 20px 0 30px;
-        }
-
+    .info__title {
         a {
-            color: inherit;
-        }
-    
-        span {
             color: $red;
-            font-weight: 700;
         }
     }
 }
@@ -882,6 +867,10 @@ img {
         padding: 0;
         padding-bottom: 20px;
         font-size: 1.3rem;
+    }
+
+    a {
+        color: inherit;
     }
 }
 
