@@ -39,11 +39,7 @@ img {
 }
 
 .section {
-    padding: 30px 0;
-
-    @media screen and (min-width: $tablet) {
-        padding: 50px 0;
-    }
+    padding: 100px 0;
 }
 
 .section__title {
@@ -802,9 +798,6 @@ img {
 
 // --------------- PROJECT ----------------------------
 
-#projects {
-    padding-top: 100px;
-}
 // .projects__decor {
 //     display: none;
 //     @media screen and (min-width: $tablet) {
@@ -820,6 +813,12 @@ img {
 .info__box {
     padding: 20px 0;
     width: 100%;
+
+    .info__title {
+        a {
+            color: $red;
+        }
+    }
 }
 
 .info__title {
@@ -1010,7 +1009,7 @@ img {
             top: 0;
             right: 20px;
             width: 140px;
-            padding-top: 20px;
+            padding-top: 90px;
         }
 
         @media screen and (min-width: $large) {
@@ -1039,12 +1038,15 @@ img {
 
 .donate__info {
     font-family: $openSans;
-    font-weight: bold;
-    font-size: 1rem;
+    
     // margin-top: 60px;
 
-    @media screen and (min-width: $tablet) {
-        font-size: 2rem;
+    p {
+        font-size: 1rem;
+
+        @media screen and (min-width: $tablet) {
+            font-size: 1.8rem;
+        }
     }
 
     .account__name {
@@ -1054,6 +1056,14 @@ img {
         @media screen and (min-width: $tablet) {
             font-size: 2rem;
         }
+    }
+
+    .title {
+        color: $red;
+    }
+
+    small {
+        font-size: 1.3rem;
     }
 
     .section__desc {
@@ -1269,6 +1279,11 @@ form {
     .info__title {
         color: inherit;
         padding-left: 70px;
+        font-size: 1.6rem;
+
+        @media screen and (min-width: $desktop) {
+            font-size: 2rem;
+        }
 
         span {
             &::before {
@@ -1281,6 +1296,11 @@ form {
 
     }
     .info__desc {
+        font-size: 1.2rem;
+
+        @media screen and (min-width: $desktop) {
+            font-size: 1.4rem;
+        }
 
         a {
             color: inherit;
@@ -1292,6 +1312,12 @@ form {
     .krs__info {
         color: inherit;
         padding-top: 20px;
+        text-align: center;
+
+        @media screen and (min-width: $tablet) {
+            width: 50%;
+        }
+        
 
         a {
             color:  inherit;
