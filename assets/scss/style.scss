@@ -62,6 +62,10 @@ img {
         @media screen and (min-width: $tablet) {
             font-size: 4.6rem;
         }
+
+        a {
+            color: inherit;
+        }
     }
 }
 
@@ -813,12 +817,6 @@ img {
 .info__box {
     padding: 20px 0;
     width: 100%;
-
-    .info__title {
-        a {
-            color: $red;
-        }
-    }
 }
 
 .info__title {
