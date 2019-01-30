@@ -832,11 +832,6 @@ img {
         span {
             color: $red;
             font-weight: 700;
-            font-size: 3rem;
-    
-            @media screen and (min-width: $tablet) {
-                font-size: 3.4rem;
-            }
         }
     }
 }
