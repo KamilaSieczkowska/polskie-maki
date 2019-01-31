@@ -1370,3 +1370,75 @@ form {
 
 
 
+
+// POST DONATE
+
+.red__label {
+    width: 100%;
+    background: $red;
+    height: 30px;
+
+    @media screen and (min-width: $tablet) {
+        height: 60px;
+    }
+}
+
+.logo__post-donate__box {
+    padding-top: 20px;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+        padding-top: 50px;
+    }
+
+    .logo__post-donate {
+        display: block;
+        width: 150px;
+        margin: 0 auto;
+
+        @media screen and (min-width: $tablet) {
+            width: 250px;
+        }
+    }
+}
+
+.post-donate__content {
+    padding: 20px 0;
+
+    @media screen and (min-width: $tablet) {
+        padding-top: 50px;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
+
+    .section__desc {
+        text-align: center;
+
+        &.ps__btn {
+            font-size: 3rem;
+            font-family: $openSansCondensed;
+
+            a {
+                display: inline-block;
+                text-decoration: none;
+                color: $red;
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .homepage__btn {
+        display: inline-block;
+        text-decoration: none;
+        color: $red;
+        font-size: 1.7rem;
+        margin: 0 auto;
+        font-family: $openSansCondensed;
+
+    }
+}
