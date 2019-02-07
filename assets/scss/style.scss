@@ -28,6 +28,43 @@ img {
     max-width: 100%;
 }
 
+// ---------- COOKIES ------------------------
+
+.cookie__alert {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 20px;
+    background: $textColor;
+    color: #FFF;
+    z-index: 99999;
+
+    h6 {
+        font-weight: bold;
+        font-size: 1.3rem;
+        max-width: 90%;
+        margin-bottom: 10px;
+    }
+
+    a {
+        color: inherit;
+        display: inline-block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: $red;
+        padding: 5px 12px;
+        border-radius: 50%;
+
+        &:hover {
+            text-decoration: none;
+            background: rgb(129, 0, 0);
+        }
+    }
+}
+
+//---------------------------------------------
+
 .flex {
     display: flex;
     justify-content: space-between;

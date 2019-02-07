@@ -1,5 +1,39 @@
 $(document).ready(function () {
 
+    // COOKIES
+    (function() {
+        var container = document.createElement('div');
+        var link = document.createElement('a');
+    
+        container.setAttribute('id', 'cookie-info');
+        container.setAttribute('class', 'cookie__alert');
+        container.innerHTML = '<h6>Ta strona wykorzystuje pliki cookies</h6><p>Używamy informacji zapisanych za pomocą plików cookies w celu zapewnienia maksymalnej wygody w korzystaniu z naszego serwisu. <br />Jeżeli wyrażasz na to zgodę, kliknij na &bdquo;x&rdquo; w prawym górnym rogu tej informacji. Jeśli nie wyrażasz zgody, ustawienia dotyczące plików cookies możesz zmienić w swojej przeglądarce.</p>';
+    
+        link.setAttribute('href', '#');
+        link.setAttribute('title', 'Zamknij');
+        link.innerHTML = 'X';
+    
+        function clickHandler(e) {
+            if (e.preventDefault) {
+                e.preventDefault();
+            } else {
+                e.returnValue = false;
+            }
+    
+            document.body.removeChild(container);
+        }
+    
+        if (link.addEventListener) {
+            link.addEventListener('click', clickHandler);
+        } else {
+            link.attachEvent('onclick', clickHandler);
+        }
+    
+        container.appendChild(link);
+        document.body.appendChild(container);
+    
+        return true;
+    })();
 
     // TOGGLE MOBILE MENU
     $('#toggle').click(function () {
